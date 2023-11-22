@@ -1,0 +1,28 @@
+<form [formGroup]="addForm" (submit)="onSubmit()" class="max-w-md mx-auto bg-gray-100 p-6 rounded-md shadow-md">
+  <h2 class="text-xl font-semibold mb-4 text-gray-800">Nuevo Producto</h2>
+
+  <div class="mb-4">
+    <label for="name" class="block text-gray-600 font-bold mb-2">Nombre</label>
+    <input type="text" id="name" formControlName="name" class="w-full border-b-2 p-2 focus:outline-none focus:border-blue-500 transition duration-300">
+  </div>
+
+  <div class="mb-4">
+    <label for="price" class="block text-gray-600 font-bold mb-2">Precio</label>
+    <input type="number" id="price" formControlName="price" class="w-full border-b-2 p-2 focus:outline-none focus:border-blue-500 transition duration-300">
+  </div>
+
+  <div class="mb-4">
+    <label for="description" class="block text-gray-600 font-bold mb-2">Descripción</label>
+    <textarea id="description" formControlName="description" class="w-full border-b-2 p-2 focus:outline-none focus:border-blue-500 transition duration-300"></textarea>
+  </div>
+
+  <div class="mb-4">
+    <label for="image" class="block text-gray-600 font-bold mb-2">Imagen (URL o BLOB)</label>
+    <input type="text" id="image" formControlName="image" class="w-full border-b-2 p-2 focus:outline-none focus:border-blue-500 transition duration-300">
+  </div>
+
+  <div class="flex justify-end">
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300">Guardar</button>
+    <button type="button" (click)="onCancel()" class="bg-gray-300 text-gray-700 ml-2 px-4 py-2 rounded-md hover:bg-gray-400 transition duration-300">Cancelar</button>
+  </div>
+</form>
